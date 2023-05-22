@@ -1,0 +1,3 @@
+.loginformWrapper{
+    width: clamp(300px, 50%, 420px);
+}

@@ -1,0 +1,22 @@
+@font-face {
+    font-family: 'TT_Norms_Regular';
+    font-style: normal;
+    src:  url('../assets/Norms/v2/TT_Norms_Regular.eot');
+    src:  url('../assets/Norms/v2/TT_Norms_Regular.eot?#iefix') format('embedded-opentype'),
+       url('../assets/Norms/v2/TT_Norms_Regular.woff') format('woff'),
+       url('../assets/Norms/v2/TT_Norms_Regular.ttf') format('truetype'),
+       url('../assets/Norms/v2/TT_Norms_Regular.svg#TT_Norms_Regular') format('svg');
+    font-display: swap;
+  }
+  
+  @font-face {
+    font-family: 'TT_Norms_Bold';
+    font-style: normal;
+    /* font-weight: 500; */
+    src:  url('../assets/Norms/v2/TT_Norms_Bold.eot');
+    src:  url('../assets/Norms/v2/TT_Norms_Bold.eot?#iefix') format('embedded-opentype'),
+       url('../assets/Norms/v2/TT_Norms_Bold.woff') format('woff'),
+       url('../assets/Norms/v2/TT_Norms_Bold.ttf') format('truetype'),
+       url('../assets/Norms/v2/TT_Norms_Bold.svg#TT_Norms_Bold') format('svg');
+    font-display: swap;
+  }

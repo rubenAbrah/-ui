@@ -1,0 +1,52 @@
+i {
+    font-family: FontAwesome;
+    font-style: normal;
+}
+
+.settings:before {
+    content: "\f013";
+}
+
+.notification:before {
+    content: "\f0f3";
+}
+
+.account:before {
+    content: "\f007";
+}
+
+.menu-active:before {
+    content: "\f039";
+}
+
+.menu-close:before {
+    content: "\f038";
+}
+
+.subMenuOpen:before {
+    content: "\f107";
+}
+
+.calendar::before {
+    content: "\f073";
+}
+
+.subMenuClose:before {
+    content: "\f106";
+}
+
+.close::before {
+    content: "\f00d";
+}
+
+.folder::before {
+    content: "\f07b";
+}
+
+.chart::before {
+    content: "\f080";
+}
+
+.building::before {
+    content: "\f0f7";
+}
