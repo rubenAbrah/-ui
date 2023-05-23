@@ -50,3 +50,12 @@ i {
 .building::before {
     content: "\f0f7";
 }
+
+.moon::before {
+    content: "\f186";
+}
+
+.sun::before {
+    content: "\f185";
+    color: gold;
+}

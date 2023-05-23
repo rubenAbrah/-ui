@@ -7807,8 +7807,8 @@ fieldset:disabled .btn {
 .sticky-top {
   position: -webkit-sticky;
   position: sticky;
-  top: 0;
-  z-index: 1020;
+  top: 1rem;
+  z-index: 15;
 }
 
 .sticky-bottom {
@@ -12674,3 +12674,27 @@ fieldset:disabled .btn {
 .zindex-20 {
   z-index: 20;
 }
+.mlMinus100{
+  margin-left: -100% !important;
+}
+.size40{
+  width: 40px;
+  height: 40px;
+}
+.scrollbar {
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+
+.scrollbar::-webkit-scrollbar {
+  width: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  border-radius: 15px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  background: grey;
+  border-radius: 12px;
+}  
