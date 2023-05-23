@@ -12,7 +12,7 @@ function SidebarComponent(
 
   const paths = useRef(null);
 
-  const query = 1000;
+  const query = 991;
   const [showMenu, setShowMenu] = useState(true);
   const [match, setMatch] = useState(window.innerWidth > query);
 
