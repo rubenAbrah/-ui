@@ -83,11 +83,11 @@ body {
 }
 
 hr {
-  margin: 1rem 0;
-  color: inherit;
-  border: 0;
-  border-top: 1px solid;
-  opacity: 0.25;
+  height: 1px;
+  border-top: 0px solid rgba(0, 0, 0, 0.12);
+  border-right: 0px solid rgba(0, 0, 0, 0.12);
+  border-left: 0px solid rgba(0, 0, 0, 0.12);
+  border-bottom: none;
 }
 
 h6,
@@ -12674,13 +12674,16 @@ fieldset:disabled .btn {
 .zindex-20 {
   z-index: 20;
 }
-.mlMinus100{
+
+.mlMinus100 {
   margin-left: -100% !important;
 }
-.size40{
+
+.size40 {
   width: 40px;
   height: 40px;
 }
+
 .scrollbar {
   overflow-y: scroll;
   overflow-x: hidden;
@@ -12697,4 +12700,4 @@ fieldset:disabled .btn {
 .scrollbar::-webkit-scrollbar-thumb {
   background: grey;
   border-radius: 12px;
-}  
+}

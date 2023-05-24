@@ -1,0 +1,59 @@
+#grid {
+    height: 500px;
+}
+
+.options {
+    padding: 20px;
+    margin-top: 20px;
+    background-color: rgba(191, 191, 191, 0.15);
+}
+
+.caption {
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.option {
+    margin-top: 10px;
+}
+
+.option>span {
+    margin-right: 10px;
+}
+
+.option>.dx-widget {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.dx-fa-button-icon,
+.dx-fa-button-icon-close {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.dx-tabpanel .dx-tabs-wrapper {
+    display: flex;
+    flex-flow: row nowrap;
+}
+
+.dx-tab {
+    display: flex;
+    flex-flow: row nowrap;
+    flex: 1;
+    justify-content: center;
+}
+
+#ra-button-style .dx-fa-button-icon {
+    background-color: red; 
+}
+
+.dx-fa-button.dx-fa-button-main .dx-overlay-content .dx-fa-button-icon {
+    background-color: #000 !important;
+    color: #fff !important;
+}
+.options{
+    background-color: rgba(191, 191, 191, 0.15);
+    padding: 30px;
+}

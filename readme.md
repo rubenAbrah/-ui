@@ -41,3 +41,12 @@
     РФ
         адреса
     Сервисы
+    -k
+
+    -ui примеры страниц https://js.devexpress.com/Demos/WidgetsGallery/Demo/Diagram/Overview/React/Light/
+
+TODO:
+   старая ракета 
+      1 лк
+      2 rapanel
+      3 cnpanel

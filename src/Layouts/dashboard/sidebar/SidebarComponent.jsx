@@ -1,46 +1,30 @@
-import { useEffect, useState , useRef } from "react"; 
+import { useEffect, useState, useRef } from "react";
 import "../../../css/bootstrap.css";
 import "../../../css/icons.css";
 import "../../../css/colors.css";
-
+import { useDispalyMedia } from "../../../hooks/useDispalyMedia";
 function SidebarComponent(
   {
-    // showMenu, setShowMenu
+    // showSidebar, setShowSidebar
   }
-) {
-  // ${!showMenu   ? "lMinus280px": ''}
-
-  const paths = useRef(null);
-
-  const query = 991;
-  const [showMenu, setShowMenu] = useState(true);
-  const [match, setMatch] = useState(window.innerWidth > query);
-
-  function onChange() {
-    setMatch(window.innerWidth > query);
-    match ?  setShowMenu(true):setShowMenu(false)
-  }
-
+) { 
+  let match = useDispalyMedia();
+  const [showSidebar, setShowSidebar] = useState(match);
   useEffect(() => {
-    window.addEventListener("resize", onChange);
-    return () => window.removeEventListener("resize", onChange);
-  }, [window.innerWidth]);
+    setShowSidebar(match);
+  }, [match]);
 
   return (
     <div
-      className={` rounded-2 sidebar position-fixed vh-100 zindex-20
+      className={` rounded-2 sidebar position-fixed  zindex-20
           scrollbar sidebarHeight overflowXhidden  start-0 p-3 m-2 col-xxl-2   
-          ${
-            showMenu  
-              ? "col-lg-3 col-md-4 col-sm-5  col-12"
-              : "mlMinus100"
-          } 
+          ${showSidebar ? "col-lg-3 col-md-4 col-sm-5  col-12" : "mlMinus100"} 
          `}
     >
       {!match ? (
         <span
           onClick={() => {
-            setShowMenu(false);
+            setShowSidebar(false);
           }}
           className=" position-absolute end-0 align-content-center justify-content-center d-flex"
         >
@@ -59,7 +43,7 @@ function SidebarComponent(
         />
       </a>
 
-      <hr className="darkHr" />
+      <hr className="hr" />
       <div className="imgSection  my-2  justify-content-center aligncontent-center">
         <img
           className="width-100"
@@ -68,7 +52,7 @@ function SidebarComponent(
         />
       </div>
 
-      <hr className="darkHr" />
+      <hr className="hr" />
       <div className="flex  imgSection  align-content-center my-2">
         <img
           className="rounded-circle size40"
@@ -77,13 +61,15 @@ function SidebarComponent(
         />
         <span className="m-3">Richard Davis</span>
       </div>
-      <hr className="darkHr" />
+      <hr className="hr" />
       <nav>
         <ul className="list-inline">
           {menuList.map((menuItem) => (
             <li key={menuItem.name} className="d-flex">
               <a
-                className={`${location.pathname === menuItem.link ? 'active' : '' } p-2 m-1 w-100`} 
+                className={`${
+                  location.pathname === menuItem.link ? "active" : ""
+                } p-2 m-1 w-100`}
                 href={menuItem.link}
               >
                 {menuItem.name}

@@ -8,7 +8,7 @@
   --sidebar-text-color-global: rgb(52, 71, 103);
   --section-background-color: rgb(255, 255, 255);
   --header-background-color-global: hsla(0, 0%, 100%, 0.8);
-  --hr-style: linear-gradient(to right, rgba(52, 71, 103, 0), rgba(52, 71, 103, 0.4), rgba(52, 71, 103, 0))
+  --hr-style: linear-gradient(to right, rgba(52, 71, 103, 0), rgba(52, 71, 103, 0.4), rgba(52, 71, 103, 0)) !important
 }
 
 [data-theme="dark"] {
@@ -21,7 +21,7 @@
   --hr-style: linear-gradient(to right,
       rgba(255, 255, 255, 0),
       rgb(255, 255, 255),
-      rgba(255, 255, 255, 0));
+      rgba(255, 255, 255, 0)) !important;
 }
 
 
@@ -40,6 +40,7 @@ a {
 
 .sidebar {
   background-color: var(--sidebar-background-color-global);
+  height: calc( 100vh - 2rem);
 }
 
 header {
@@ -50,7 +51,7 @@ section {
   background-color: var(--section-background-color);
 }
 
-hr {
+.hr {
   background-image: var(--hr-style);
 }
 
@@ -266,8 +267,8 @@ button.bg-blue-500:hover {
   background-color: #ff6969;
 }
 
-.bg-red-500 {
-  background-color: #ff4f4f;
+.bg-red-500  {
+  background-color: #ff4f4f  ;
 }
 
 .bg-red-600 {
@@ -818,3 +819,7 @@ button.bg-blue-500:hover {
 .bg-black-A700 {
   background-color: #d40000;
 }
+
+
+
+ 
