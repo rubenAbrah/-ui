@@ -19,17 +19,15 @@ const fontsArr = [
   'TT-Norms-normal-800',
 ];
 
-let fontSizes = [1, 2, 3, 4, 5, 6, 7, 8]
+let fontSizes = [1, 2, 3, 4, 5, 6]
 function FontsDemo() {
   return (
     <>
-      {fontsArr.map((font) => (
-        <> 
-          <div className={font}>
-            <p>className {font}</p>
+      {fontsArr.map((font,i) => ( 
+          <div key={i} className={font}>
+            <p className="h1">className {font}</p>
             <FontSizes_text font={font} />
-          </div>
-        </>
+          </div> 
       ))}
     </>
   );
@@ -37,13 +35,13 @@ function FontsDemo() {
 function FontSizes_text({ font }) {
   return (
     <>
-      {fontSizes.map((fontSize) => (
-        <div className={`h${fontSize}`}>
+      {fontSizes.map((fontSize, i) => (
+        <div key={i} className={`h${fontSize}`}>
           {`h${fontSize}`} Съешь ещё этих мягких французских булок, да выпей же чаю
         </div>
       ))}
-      {fontSizes.map((fontSize) => (
-        <div className={`h${fontSize}`}>
+      {fontSizes.map((fontSize,i) => (
+        <div key={i} className={`h${fontSize}`}>
           {`h${fontSize}`} The quick brown fox jumps over the lazy dog
         </div>
       ))}

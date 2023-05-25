@@ -70,7 +70,8 @@
 }
 
 body {
-  margin: 0;
+  margin: 0 auto;
+  max-width: 1920px;
   font-family: var(--bs-body-font-family);
   font-size: var(--bs-body-font-size);
   font-weight: var(--bs-body-font-weight);
@@ -12675,14 +12676,6 @@ fieldset:disabled .btn {
   z-index: 20;
 }
 
-.mlMinus100 {
-  margin-left: -100% !important;
-}
-
-.size40 {
-  width: 40px;
-  height: 40px;
-}
 
 .scrollbar {
   overflow-y: scroll;
@@ -12700,4 +12693,23 @@ fieldset:disabled .btn {
 .scrollbar::-webkit-scrollbar-thumb {
   background: grey;
   border-radius: 12px;
+} 
+.w-90{
+  width: 90%;
+}
+ 
+
+.mlMinus100 {
+  margin-left: -100% !important;
+}
+
+.size40 {
+  width: 40px;
+  height: 40px;
+}
+.h-300{
+  height: 250px;
+}
+.object-cover{
+object-fit: cover;
 }

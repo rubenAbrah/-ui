@@ -65,9 +65,13 @@
 
 .radio-3:checked~.glider {
     transform: translateX(200%);
-}.radio-4:checked~.glider {
+}
+
+.radio-4:checked~.glider {
     transform: translateX(300%);
-}.radio-5:checked~.glider {
+}
+
+.radio-5:checked~.glider {
     transform: translateX(400%);
 }
 
@@ -81,7 +85,11 @@
     transition: 0.3s ease-out;
 }
 
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 600px) {
+    .tabs {
+        flex-direction: column;
+    }
+
     .radio-1:checked~.glider {
         transform: translateY(0);
     }
@@ -94,7 +102,15 @@
         transform: translateY(200%);
     }
 
+    .radio-4:checked~.glider {
+        transform: translateY(300%);
+    }
+
+    .radio-5:checked~.glider {
+        transform: translateY(400%);
+    }
+
     .glider {
-        width: calc(100% - 20px);
+        width: calc(100% - 2rem);
     }
 }

@@ -8,29 +8,27 @@ function toggleTheme(e) {
     document.body.dataset.theme = "dark";
     e.target.className = "sun";
   }
-}
+} 
 function HeaderComponent(
   {
-    // setShowMenu
+    setShowSidebar
   }
-) {
-  const [showSidebar, setShowSidebar] = useState(true);
-  useEffect(() => {
-    console.log(showSidebar);
-  }, [showSidebar]);
-
+) { 
+let match = useDispalyMedia()
   return (
     <header
       className={`width100 br075rem p-3 my-2 ${
-        useDispalyMedia() ? "sticky-top top-1" : ""
+        match ? "sticky-top top-1" : ""
       } headerBacground header rounded-3  `}
     >
       <div className={`d-flex   justify-content-between p30 m15`}>
         <div className="">
-          {!useDispalyMedia() ? (
+          { !match? (
             <span onClick={() => setShowSidebar(true)}>
               <i
-                className={showSidebar ? "menu-close" : "menu-active"}
+                className={
+                  // showSidebar ? "menu-close" : 
+                  "menu-active"}
                 aria-hidden="true"
               ></i>
             </span>

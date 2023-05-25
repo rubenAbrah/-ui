@@ -34,8 +34,10 @@ section,
 body,
 .sidebar,
 a {
+  transition: all 800ms ease-out;
+}
+body,a{
   color: var(--sidebar-text-color-global);
-  transition: 2s;
 }
 
 .sidebar {

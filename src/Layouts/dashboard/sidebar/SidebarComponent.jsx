@@ -5,15 +5,13 @@ import "../../../css/colors.css";
 import { useDispalyMedia } from "../../../hooks/useDispalyMedia";
 function SidebarComponent(
   {
-    // showSidebar, setShowSidebar
+    showSidebar, setShowSidebar
   }
 ) { 
-  let match = useDispalyMedia();
-  const [showSidebar, setShowSidebar] = useState(match);
-  useEffect(() => {
-    setShowSidebar(match);
+  let match = useDispalyMedia(); 
+ useEffect(() => {
+    setShowSidebar(match)
   }, [match]);
-
   return (
     <div
       className={` rounded-2 sidebar position-fixed  zindex-20
