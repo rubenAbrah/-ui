@@ -8354,7 +8354,7 @@ fieldset:disabled .btn {
 }
 
 .flex-row {
-  flex-direction: row !important;
+  flex-direction: row;
 }
 
 .flex-column {

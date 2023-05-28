@@ -1,27 +1,30 @@
-import { RadioButton } from "../radioButtonWave/RadioButton"; 
+import { useRef } from "react";
 
+import wave from "./wave";
 import "./Tabs.css";
-
-function Tabs({data, setActiveTab }) {
+function Tabs({ data, setActiveTab, flexDirection = 'row' }) {
+  const glider = useRef(null)
   return (
     <div
       className="flex my20 alignCenter justifyCenter"
-      onChange={(e) => setActiveTab(data[e.target.id])}
     >
-      <div className={`position-relative d-flex p-3 rounded-3 tabs`}>
+      <div className={`position-relative d-flex 
+      flex-${flexDirection} 
+      p-3 rounded-3   tabs`}>
         {data.map((tab, i) => (
-          <RadioButton
-            key={tab.id}
-            labelClassName={`tab rounded-3 radioLabel`}
-            className={`radioInput ${tab["className"]}`}
-            id={tab.id}
-            name={tab.name}
-            defaultChecked={i == 0 ? "checked" : false}
-          >
+          <div key={i} className={`tab position-relative rounded-3 radioLabel
+       `}
+            onClick={(e) => {
+              wave(e)
+               glider.current.parentElement.clientWidth > glider.current.clientWidth * 2  ?
+               glider.current.style.transform = `translateX(${i}00%)`:
+                glider.current.style.transform = `translateY(${i}00%)`
+              setActiveTab(data[i])
+            }} >
             {tab.title}
-          </RadioButton>
+          </div>
         ))}
-        <span className={`glider rounded-3`}></span>
+        <span ref={glider} className={`glider rounded-3`}></span>
       </div>
     </div>
   );
