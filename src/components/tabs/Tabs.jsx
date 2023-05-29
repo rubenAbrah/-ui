@@ -2,7 +2,7 @@ import { useRef } from "react";
 
 import wave from "./wave";
 import "./Tabs.css";
-function Tabs({ data, setActiveTab, flexDirection = 'row' }) {
+function Tabs({ data, setActiveTab, flexDirection = '' }) {
   const glider = useRef(null)
   return (
     <div

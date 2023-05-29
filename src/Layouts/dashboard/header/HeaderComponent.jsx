@@ -8,13 +8,9 @@ function toggleTheme(e) {
     document.body.dataset.theme = "dark";
     e.target.className = "sun";
   }
-} 
-function HeaderComponent(
-  {
-    setShowSidebar
-  }
-) { 
-let match = useDispalyMedia()
+}
+function HeaderComponent({ setShowSidebar }) {
+  let match = useDispalyMedia(); 
   return (
     <header
       className={`width100 br075rem p-3 my-2 ${
@@ -23,12 +19,13 @@ let match = useDispalyMedia()
     >
       <div className={`d-flex   justify-content-between p30 m15`}>
         <div className="">
-          { !match? (
+          {!match ? (
             <span onClick={() => setShowSidebar(true)}>
               <i
                 className={
-                  // showSidebar ? "menu-close" : 
-                  "menu-active"}
+                  // showSidebar ? "menu-close" :
+                  "menu-active"
+                }
                 aria-hidden="true"
               ></i>
             </span>
